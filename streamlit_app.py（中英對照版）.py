@@ -7,7 +7,7 @@ import random
 @st.cache_data
 
 def load_data():
-    df = pd.read_csv(r"C:\Users\falli\OneDrive\Desktop\my code\Jupyter Source File\NetFlix Project\netflix_bilingual_merged_clean.csv")
+    df = pd.read_csv("netflix_bilingual_merged_clean.csv")
     if isinstance(df.loc[0, "genre_list"], str):
         df["genre_list"] = df["genre_list"].apply(eval)
     return df
